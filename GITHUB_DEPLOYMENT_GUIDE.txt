@@ -1,0 +1,220 @@
+================================================================================
+                    GITHUB PAGES DEPLOYMENT GUIDE
+                    S. Blessy ePortfolio
+================================================================================
+
+This guide will walk you through deploying your portfolio website to GitHub 
+Pages for free hosting.
+
+--------------------------------------------------------------------------------
+PREREQUISITES
+--------------------------------------------------------------------------------
+
+1. A GitHub account (free) - Sign up at https://github.com/signup
+2. The index.html file from this project
+
+--------------------------------------------------------------------------------
+STEP 1: CREATE A NEW GITHUB REPOSITORY
+--------------------------------------------------------------------------------
+
+1. Go to https://github.com and log in to your account
+
+2. Click the "+" icon in the top-right corner of the page
+
+3. Select "New repository" from the dropdown menu
+
+4. Fill in the repository details:
+   - Repository name: Choose one of these options:
+     
+     OPTION A (Recommended): Use your username
+     Name it: yourusername.github.io
+     (Replace "yourusername" with your actual GitHub username)
+     Your site will be live at: https://yourusername.github.io
+     
+     OPTION B: Use a custom name
+     Name it: portfolio (or any name you prefer)
+     Your site will be live at: https://yourusername.github.io/portfolio
+
+   - Description: "My Forensic Science ePortfolio" (optional)
+   - Select "Public" (required for free GitHub Pages)
+   - Check "Add a README file" (optional but recommended)
+
+5. Click "Create repository"
+
+--------------------------------------------------------------------------------
+STEP 2: UPLOAD YOUR FILES
+--------------------------------------------------------------------------------
+
+METHOD A: Using GitHub Web Interface (Easiest)
+----------------------------------------------
+
+1. In your new repository, click "Add file" button
+
+2. Select "Upload files"
+
+3. Drag and drop the index.html file into the upload area
+   OR click "choose your files" to browse and select it
+
+4. Scroll down to "Commit changes"
+   - Add a commit message like "Add portfolio website"
+   - Keep "Commit directly to the main branch" selected
+
+5. Click "Commit changes"
+
+
+METHOD B: Using Git Command Line (For advanced users)
+------------------------------------------------------
+
+1. Open Terminal (Mac/Linux) or Command Prompt (Windows)
+
+2. Clone your repository:
+   git clone https://github.com/yourusername/your-repo-name.git
+
+3. Navigate to the folder:
+   cd your-repo-name
+
+4. Copy the index.html file into this folder
+
+5. Add, commit, and push:
+   git add index.html
+   git commit -m "Add portfolio website"
+   git push origin main
+
+--------------------------------------------------------------------------------
+STEP 3: ENABLE GITHUB PAGES
+--------------------------------------------------------------------------------
+
+1. In your repository, click "Settings" (gear icon in the top menu)
+
+2. In the left sidebar, scroll down and click "Pages"
+
+3. Under "Source", you'll see "Build and deployment"
+   - Source: Select "Deploy from a branch"
+   - Branch: Select "main" from the dropdown
+   - Folder: Select "/ (root)"
+
+4. Click "Save"
+
+5. Wait 1-2 minutes for GitHub to build your site
+
+6. Refresh the page - you'll see a green box with your live URL:
+   "Your site is live at https://yourusername.github.io"
+
+--------------------------------------------------------------------------------
+STEP 4: ACCESS YOUR LIVE WEBSITE
+--------------------------------------------------------------------------------
+
+Your portfolio is now live! Access it at:
+
+- If you named your repo "yourusername.github.io":
+  https://yourusername.github.io
+
+- If you used a custom name like "portfolio":
+  https://yourusername.github.io/portfolio
+
+--------------------------------------------------------------------------------
+UPDATING YOUR WEBSITE
+--------------------------------------------------------------------------------
+
+To make changes to your portfolio:
+
+1. Edit the index.html file on your computer
+
+2. Go to your repository on GitHub
+
+3. Click on "index.html" to open it
+
+4. Click the pencil icon (Edit this file) in the top-right
+
+5. Replace the content with your updated HTML
+   OR use "Add file" > "Upload files" to upload the new version
+
+6. Commit your changes
+
+7. Wait 1-2 minutes for the changes to go live
+
+--------------------------------------------------------------------------------
+TROUBLESHOOTING
+--------------------------------------------------------------------------------
+
+PROBLEM: Site shows 404 error
+SOLUTION: 
+- Make sure your file is named exactly "index.html" (lowercase)
+- Check that GitHub Pages is enabled in Settings > Pages
+- Wait a few more minutes - it can take up to 10 minutes
+
+PROBLEM: Site looks broken / no styling
+SOLUTION:
+- Open index.html in a text editor and verify all code is intact
+- Make sure you uploaded the complete file
+
+PROBLEM: Changes not showing up
+SOLUTION:
+- Clear your browser cache (Ctrl+Shift+R or Cmd+Shift+R)
+- Wait 2-5 minutes after committing changes
+- Check the "Actions" tab to see if deployment is still in progress
+
+PROBLEM: "Page not found" on custom repo name
+SOLUTION:
+- Make sure you're using the correct URL format:
+  https://yourusername.github.io/repo-name
+- Check Settings > Pages to confirm the correct URL
+
+--------------------------------------------------------------------------------
+CUSTOMIZING YOUR PORTFOLIO
+--------------------------------------------------------------------------------
+
+To personalize your portfolio, edit these sections in index.html:
+
+1. TITLE (Line 7):
+   <title>S. Blessy | B.Sc. Forensic Science Student</title>
+   Change "S. Blessy" to your name
+
+2. NAVBAR BRAND (Line ~203):
+   <a href="#" class="navbar-brand">S. Blessy</a>
+   Change to your name
+
+3. HEADLINE (Line ~228):
+   Change the degree and field to match yours
+
+4. SUMMARY (Line ~235):
+   Write your own personal summary
+
+5. SKILL PILLS (Line ~243):
+   Modify the skills to reflect your expertise
+
+6. FOOTER (Line ~338):
+   Update the copyright with your name
+
+--------------------------------------------------------------------------------
+ADDING A CUSTOM DOMAIN (Optional)
+--------------------------------------------------------------------------------
+
+If you own a domain (like www.yourname.com):
+
+1. Go to Settings > Pages in your repository
+
+2. Under "Custom domain", enter your domain name
+
+3. Click "Save"
+
+4. Add these DNS records at your domain registrar:
+   - Type: A, Host: @, Points to: 185.199.108.153
+   - Type: A, Host: @, Points to: 185.199.109.153
+   - Type: A, Host: @, Points to: 185.199.110.153
+   - Type: A, Host: @, Points to: 185.199.111.153
+   - Type: CNAME, Host: www, Points to: yourusername.github.io
+
+5. Wait 24-48 hours for DNS propagation
+
+--------------------------------------------------------------------------------
+NEED HELP?
+--------------------------------------------------------------------------------
+
+- GitHub Pages Documentation: https://docs.github.com/en/pages
+- GitHub Community: https://github.community
+- Stack Overflow: https://stackoverflow.com/questions/tagged/github-pages
+
+================================================================================
+                    Congratulations on your new portfolio!
+================================================================================
